@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <a class="navbar-brand ms-5 ps-5" href="furni.html">
+            <h1>Furni.</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="home.html">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="shop.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="blog.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact.html">Contact Us</a>
+                </li>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-but">
+                        <a class="btn btn-outline-none text-white" href="user.html"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                    <li class="nav-but me-5 pe-5">
+                        <a class="btn btn-outline-none text-white" href="cart.html"><i
+                                class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- <h1>Welcome to the Cart Page</h1>
+    <p>This is the content of the Cart Page.</p> -->
+
+    <div class="top1 bg-success" style="height: 300px;">
+        <div class="container">
+            <div class="top text-white"><br><br><br>
+                <h1>Cart</h1>
+            </div>
+        </div>
+    </div>
+    <table class="table table-hover ms-5 me-5 ps-5 pe-5 mt-5 mb-5">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+                <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><img src="images/product-1.png" alt="image" style="height: 100px; width: 100px;"></th>
+                <td>Product 1</td>
+                <td>$49.00</td>
+                <td>
+                    <div class="row">
+                        <div class="col-2">
+                            <button class="btn btn-danger btn-block" onclick="decrementCounter()">-</button>
+                        </div>
+                        <div class="col-2">
+                            <span class="counter" id="count">0</span>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-success btn-block" onclick="incrementCounter()">+</button>
+                        </div>
+                    </div>
+                </td>
+                <td>$49.00</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <th scope="row"><img src="images/product-2.png" alt="image" style="height: 100px; width: 100px;"></th>
+                <td>Product 2</td>
+                <td>$49.00</td>
+                <td>
+                    <div class="row">
+                        <div class="col-2">
+                            <button class="btn btn-danger btn-block" onclick="decrementCounter()">-</button>
+                        </div>
+                        <div class="col-2">
+                            <span class="counter" id="count">0</span>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-success btn-block" onclick="incrementCounter()">+</button>
+                        </div>
+                    </div>
+                </td>
+                <td>$49.00</td>
+                <td>x</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="cart1 bg-primary-subtle" style="height: 400px;">
+        <div class="d-flex justify-content-between cart2 ms-5 p-5 me-0">
+            <div class="cart3" style="width: 500px;">
+                <div class="d-flex justify-content-between cart4 mb-4">
+                    <button type="button" class="btn btn-dark" style="width: 150px; height: 50px;">Update Cart</button>
+                    <button type="button" class="btn btn-dark" style="width: 200px; height: 50px;">Continue
+                        Shopping</button>
+                </div>
+                <h2>Coupon</h2>
+                <p>Enter your coupon code if you have one.</p>
+                <div class="d-flex justify-content-between cart5">
+                    <input type="text" placeholder="Coupon Code" style="width: 300px; height: 50px;">
+                    <button type="button" class="btn btn-dark" style="width: 150px; height: 80px;">Apply <br>
+                        Coupon</button>
+                </div>
+            </div>
+            <div class="cart6 me-5">
+                <h2>CART TOTALS</h2>
+                <hr>
+                <div class="d-flex justify-content-between cart7">
+                    <div class="cart8">
+                        <p>Subtotal</p>
+                        <p>Total</p>
+                    </div>
+                    <div class="cart9">
+                        <p><strong>$230.00</strong></p>
+                        <p><strong>$230.00</strong></p>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-dark" style="width: 300px; height: 70px;">Proceed To
+                    Checkout</button>
+            </div>
+        </div>
+    </div>
+    <div class="sofa1 bg-primary-subtle border" style="height: 300px;">
+        <div class="d-flex justify-content-between m-5 p-5">
+            <p></p>
+            <img src="images/sofa.png" alt="image">
+        </div>
+
+    </div>
+    <div class="newsletter1 m-5 p-5">
+        <i class="fa-solid fa-envelope mb-3">Subscribe to Newsletter</i>
+        <div class="d-flex justify-content-between newsletter2">
+            <div class="d-flex justify-content-between newsletter4" style="width: 650px;">
+                <input type="text" placeholder="Enter your name" style="width: 280px; height: 50px;">
+                <input type="email" placeholder="Enter your email" style="width: 280px; height: 50px;">
+                <i class="fa-solid fa-paper-plane border bg-success p-3" style="width: 50px; height: 50px;"></i>
+            </div>
+        </div>
+    </div>
+    <div class="section1 ms-5 me-5 ps-5 pe-5">
+        <h1>Furni.</h1>
+        <div class="d-flex justify-content-between">
+            <div class="section4">
+                <p>Donec facilisis quam ut purus rutrum lobortis. <br>
+                    Donec vitae odio quis nisl dapibus malesuada. <br>
+                    Nullam ac aliquet velit. Aliquam vulputate velit <br>
+                    imperdiet dolor tempor tristique. Pellentesque <br>
+                    habitant</p>
+                <div class="d-dlex justify-content-between pb-2 section5">
+                    <i class="fa-brands fa-facebook pe-2"></i>
+                    <i class="fa-brands fa-twitter pe-2"></i>
+                    <i class="fa-brands fa-instagram pe-2"></i>
+                    <i class="fa-brands fa-linkedin pe-2"></i>
+                </div>
+            </div>
+            <div class="section6">
+                <ul>
+                    <li class="list-group-item border-0"><a href="#goToTop"
+                            class="text-black text-decoration-none">About us</a></li>
+                    <li class="list-group-item border-0"><a href="#goToTop"
+                            class="text-black text-decoration-none">Services</a></li>
+                    <li class="list-group-item border-0"><a href="#goToTop"
+                            class="text-black text-decoration-none">Blog</a></li>
+                    <li class="list-group-item border-0"><a href="#goToTop"
+                            class="text-black text-decoration-none">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="section7">
+                <ul>
+                    <li class="list-group-item border-0"><a href="#goToTop"
+                            class="text-black text-decoration-none">Support</a></li>
+                    <li class="list-group-item border-0"><a href="#goToTop"
+                            class="text-black text-decoration-none">Knowledge base</a></li>
+                    <li class="list-group-item border-0"><a href="#goToTop" class="text-black text-decoration-none">Live
+                            chat</a></li>
+                </ul>
+            </div>
+            <div class="section8">
+                <ul>
+                    <li class="list-group-item border-0"><a href="#goToTop"
+                            class="text-black text-decoration-none">Jobs</a></li>
+                    <li class="list-group-item border-0"><a href="#goToTop" class="text-black text-decoration-none">Our
+                            team</a></li>
+                    <li class="list-group-item border-0"><a href="#goToTop"
+                            class="text-black text-decoration-none">Leadership</a></li>
+                    <li class="list-group-item border-0"><a href="#goToTop"
+                            class="text-black text-decoration-none">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="section9">
+                <ul>
+                    <li class="list-group-item border-0"><a href="#goToTop"
+                            class="text-black text-decoration-none">Nordic Chair</a></li>
+                    <li class="list-group-item border-0"><a href="#goToTop"
+                            class="text-black text-decoration-none">Kruzo Aero</a></li>
+                    <li class="list-group-item border-0"><a href="#goToTop"
+                            class="text-black text-decoration-none">Ergonomic Chair</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer ms-5 me-5 ps-5 pe-5 mt-5" style="height: 190px;">
+        <hr><br>
+        <div class=" footer1 d-flex justify-content-between">
+            <p>Copyright ©2023. All Rights Reserved. — Designed with love by <a href="#goToTop"
+                    class="text-black text-decoration-none">Untree.co</a> <br>
+                Distributed By ThemeWagon</p>
+            <ul class="d-flex justify-content-between">
+                <li class="list-group-item ps-4 border-0"><a href="#goToTop"
+                        class="text-black text-decoration-none">Terms & Conditions</a></li>
+                <li class="list-group-item ps-4 border-0"><a href="#goToTop"
+                        class="text-black text-decoration-none">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script>
+        let count = 0;
+
+        function incrementCounter() {
+            count++;
+            document.getElementById("count").textContent = count;
+        }
+
+        function decrementCounter() {
+            if (count > 0) {
+                count--;
+                document.getElementById("count").textContent = count;
+            }
+        }
+    </script>
+</body>
+
+</html>
